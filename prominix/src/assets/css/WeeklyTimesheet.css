@@ -1,0 +1,220 @@
+/*--------------------------------------------------------------
+# Weekly Timesheet Page Styles (Manual Input)
+--------------------------------------------------------------*/
+
+.weekly-timesheet-container {
+  background-color: #0c0b09;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #37332a;
+}
+
+.timesheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.timesheet-header h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.timesheet-nav {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.timesheet-nav .arrow {
+  cursor: pointer;
+  color: #fff;
+  margin: 0 15px;
+  font-size: 20px;
+  user-select: none;
+}
+
+.timesheet-nav .arrow.disabled {
+  color: #555;
+  cursor: not-allowed;
+}
+
+.timesheet-grid {
+  display: grid;
+  grid-template-columns: 220px repeat(7, 1fr); 
+  gap: 1px;
+  background-color: #37332a;
+  border: 1px solid #37332a;
+}
+
+.grid-cell {
+  background-color: #1a1814;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.grid-header {
+  font-weight: 600;
+  text-align: center;
+  background-color: #0c0b09;
+  padding: 15px 10px;
+  justify-content: center;
+}
+
+.day-header {
+  flex-direction: column;
+  gap: 4px;
+}
+
+.day-header .day-name { font-size: 12px; text-transform: uppercase; color: #aaa; }
+.day-header .date { font-size: 14px; color: #fff; }
+
+.row-label {
+  font-weight: 600;
+  padding-left: 15px;
+  background-color: #0c0b09;
+}
+
+.row-label-expandable {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.expand-icon {
+  transition: transform 0.3s ease;
+  font-size: 12px;
+}
+.expand-icon.expanded {
+  transform: rotate(90deg);
+}
+.sub-task-label {
+  padding-left: 35px;
+  font-weight: 400;
+  color: #ccc;
+}
+
+.category-selection-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    justify-content: center;
+    align-items: flex-start;
+}
+.category-choice {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+.category-choice input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+.effort-input {
+  width: 100%;
+  border: 1px solid #37332a;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 14px;
+  background-color: #0c0b09;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  -moz-appearance: textfield; /* Remove arrows from number input */
+}
+.effort-input::-webkit-outer-spin-button,
+.effort-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.effort-input:disabled {
+  background-color: #2a2824;
+  cursor: not-allowed;
+  color: #6c757d;
+}
+
+.total-efforts-cell {
+  background-color: #0c0b09;
+  font-weight: 700;
+  font-size: 18px;
+  justify-content: center;
+}
+
+.total-efforts-bar {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+/* Status Colors */
+.day-header.status-filled { background-color: #28a745; }
+.day-header.status-partial { background-color: #ffc107; }
+.day-header.status-un-captured { background-color: #dc3545; }
+.day-header.status-weekly-off { background-color: #6c757d; }
+
+.day-header.status-filled .date, .day-header.status-filled .day-name,
+.day-header.status-un-captured .date, .day-header.status-un-captured .day-name,
+.day-header.status-weekly-off .date, .day-header.status-weekly-off .day-name { color: #fff; }
+.day-header.status-partial .date, .day-header.status-partial .day-name { color: #000; }
+
+.total-efforts-bar.status-filled { background-color: #28a745; }
+.total-efforts-bar.status-partial { background-color: #ffc107; }
+
+.timesheet-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #37332a;
+}
+
+.legend-container { display: flex; gap: 15px; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #aaa; }
+.legend-color { width: 14px; height: 14px; border-radius: 3px; }
+.legend-holiday { background-color: #0d6efd; }
+.legend-weekly-off { background-color: #6c757d; }
+.legend-filled { background-color: #28a745; }
+.legend-un-captured { background-color: #dc3545; }
+
+.submit-btn {
+  background-color: #cda45e;
+  color: #1a1814;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Notes Section */
+.notes-section {
+  background-color: #1a1814;
+  border: 1px solid #37332a;
+  padding: 25px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+.notes-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.notes-header .icon { font-size: 20px; color: #cda45e; }
+.notes-list { list-style-type: disc; padding-left: 25px; margin: 0; color: #ccc; }
+.notes-list li { margin-bottom: 10px; line-height: 1.6; }

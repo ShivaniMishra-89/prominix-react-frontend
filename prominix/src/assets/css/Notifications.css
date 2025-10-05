@@ -1,0 +1,144 @@
+/*--------------------------------------------------------------
+# Notifications Page Styles (Dark Theme)
+--------------------------------------------------------------*/
+
+.notifications-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 1/3 for settings, 2/3 for feed */
+  gap: 30px;
+  align-items: start;
+}
+
+/* Settings Card */
+.settings-card {
+  background-color: #0c0b09;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #37332a;
+}
+
+.settings-card h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #cda45e;
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #37332a;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #37332a;
+  background-color: #1a1814;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Simple checkbox for toggles */
+.form-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* Notification Feed */
+.feed-card {
+  background-color: #0c0b09;
+  border-radius: 8px;
+  border: 1px solid #37332a;
+  overflow: hidden; /* To contain the border-radius on children */
+}
+
+.feed-tabs {
+  display: flex;
+  background-color: #1a1814;
+}
+
+.feed-tabs button {
+  background: none;
+  border: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: #aaa;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+}
+
+.feed-tabs button.active {
+  color: #cda45e;
+  border-bottom-color: #cda45e;
+}
+
+.notification-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 25px;
+  border-bottom: 1px solid #37332a;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.notification-item.unread {
+  background-color: #1f1d19; /* Slightly lighter for unread items */
+}
+
+.notification-icon {
+  font-size: 24px;
+  color: #cda45e;
+}
+
+.notification-content p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.notification-content .timestamp {
+  font-size: 13px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.notification-actions {
+  margin-left: auto;
+}
+
+.notification-actions button {
+  background: none;
+  border: none;
+  color: #cda45e;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}

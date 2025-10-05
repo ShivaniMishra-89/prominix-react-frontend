@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+# Policy Page Styles (Dark Theme)
+--------------------------------------------------------------*/
+
+.policy-card {
+  background-color: #0c0b09;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #37332a;
+  margin-bottom: 25px;
+}
+
+.policy-card h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #cda45e;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.policy-card p {
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.policy-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #ccc;
+}
+
+.policy-card li {
+  margin-bottom: 8px;
+}

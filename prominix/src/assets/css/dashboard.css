@@ -1,0 +1,136 @@
+/*--------------------------------------------------------------
+# Prominix Insider Dashboard Theme (Dark)
+--------------------------------------------------------------*/
+
+/* Main layout for all dashboard pages */
+.dashboard-layout {
+  background-color: #1a1814; /* Dark background from your original theme */
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  background: #0c0b09; /* Even darker header background */
+  border-bottom: 1px solid #37332a;
+  padding: 15px 0;
+  height: 80px;
+}
+
+.dashboard-header .container-fluid {
+  padding: 0 30px;
+}
+
+.dashboard-header .company-name {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  color: #fff;
+}
+
+/* Dashboard Navigation */
+.dashboard-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-nav li {
+  margin-left: 25px;
+}
+
+.dashboard-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+.dashboard-nav a:hover {
+  color: #cda45e; /* Golden color on hover */
+}
+
+/* Logout Button */
+.dashboard-nav .logout-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #cda45e;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dashboard-nav .logout-btn:hover {
+  background-color: #cda45e;
+}
+
+/* Main content area for all dashboard pages */
+.dashboard-content {
+  padding: 40px;
+}
+
+/* Dynamic Greeting Section */
+.greeting-section {
+  padding: 60px 0;
+  text-align: left;
+}
+
+.greeting-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3em;
+  font-weight: 700;
+  color: #fff;
+}
+
+.greeting-section p {
+  color: #eee;
+  font-size: 1.2em;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* Action Buttons */
+.action-buttons .btn {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 14px;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+  line-height: 1;
+  color: white;
+  border: 2px solid #cda45e;
+  margin-right: 15px;
+  background-color: transparent;
+}
+
+.action-buttons .btn:hover {
+  background: #cda45e;
+  color: #fff;
+}
+
+.dashboard-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5em;
+  color: #cda45e;
+  margin-bottom: 30px;
+}
+
+/* Subtitle for consistent page headings */
+.dashboard-subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 10px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+}
